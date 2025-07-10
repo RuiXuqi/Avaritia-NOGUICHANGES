@@ -50,7 +50,7 @@ public class AvaritiaJEIPlugin implements IModPlugin {
         registry.addRecipeCatalyst(new ItemStack(ModBlocks.extremeCraftingTable), EXTREME_CRAFTING);
         registry.getRecipeTransferRegistry().addRecipeTransferHandler(ContainerExtremeCrafting.class, EXTREME_CRAFTING,
                 1, 81, 82, 36);
-        registry.addRecipeClickArea(GUIExtremeCrafting.class, 175, 74, 22, 26, EXTREME_CRAFTING);
+        registry.addRecipeClickArea(GUIExtremeCrafting.class, 175, 79, 28, 26, EXTREME_CRAFTING);
 
         registry.addRecipes(AvaritiaRecipeManager.COMPRESSOR_RECIPES.values(), NEUTRONIUM_COMPRESSOR);
         registry.handleRecipes(ICompressorRecipe.class, CompressorRecipeWrapper::new, NEUTRONIUM_COMPRESSOR);
@@ -60,7 +60,7 @@ public class AvaritiaJEIPlugin implements IModPlugin {
 
     private static void setupDrawables(IGuiHelper helper) {
         ResourceLocation location = new ResourceLocation("avaritia:textures/gui/extreme_jei.png");
-        extreme_crafting = helper.createDrawable(location, 0, 0, 163, 221);
+        extreme_crafting = helper.createDrawable(location, 0, 0, 189, 163);
 
         location = new ResourceLocation("avaritia:textures/gui/compressor.png");
         neutronium_compressor = helper.createDrawable(location, 37, 29, 102, 41);
